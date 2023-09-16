@@ -1,0 +1,92 @@
+
+
+### Java ###
+# ============================================================
+*.hprof # heap dumps which are required for detailed analysis of memory related problems in the Java stack
+# These don't really do much being this high in .gitignore...
+#!**/src/main/**
+#!**/src/test/**
+# ============================================================
+
+
+### Gradle ###
+# ============================================================
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+/local.properties
+# '/build' dir handled in '### Build Output Dirs ###' section
+# ============================================================
+
+
+### Maven ###
+# '/target' dir handled in '### Build Output Dirs ###' section
+
+
+### IntelliJ IDEA ###
+# ============================================================
+uiDesigner.xml
+# workspace.xml is for (frequently changing) user-specific settings (tasks, changelists, history, remembering screen size, etc.)
+.idea/workspace.xml
+.idea/$CACHE_FILE$
+*.iws
+*.ipr
+# Datasource local storage ignored files
+.idea/dataSources/
+# '/out' dir handled in '### Build Output Dirs ###' section
+# Uncomment to not share project files with team
+# .idea
+# *.iml
+
+# Stuff idea auto generates in gitignore but I havent decided if I want to ignore or not
+#.idea/shelf/
+## Datasource local storage ignored files
+#.idea/dataSources.local.xml
+## Editor-based HTTP Client requests
+#.idea/httpRequests/
+
+# ============================================================
+
+
+### Eclipse ###
+.project
+.settings
+
+
+### VS Code ###
+.vscode/
+
+
+### Python ###
+**/__pycache__/**
+dist/*.egg
+### Python IntelliJ IDEA ###
+.mypy_cache/
+
+
+### Build Output Dirs (build, out, target) ###
+# ============================================================
+
+# for single module projects this is enough:
+#/build/
+#/out/
+#/target/
+
+# for multi-module projects must use leading '**/':
+**/build/*
+**/out/*
+**/target/*
+# ...and then we need to unignore any Java packages with same name:
+!**/src/**/build/**
+!**/src/**/out/**
+!**/src/**/target/**
+# ============================================================
+
+
+### Mac ###
+.DS_Store
+
+
+### Microsoft Temp Files ###
+desktop.ini
+~$*.xlsx
+~$*.docx
